@@ -1,0 +1,33 @@
+			
+	1.下载最新版maven 3.3.9		
+	2.配置系统环境变量：		
+		MAVEN_HOME	D:\EAD\apache-maven-3.3.9
+		PATH	D:\EAD\apache-maven-3.3.9\bin
+	3.CMD输入mvn，查看是否安装正常		
+			
+	4.下载最新版Eclipse For Java EE Neon		
+	5.利用Eclipse的install new software安装最新版m2e		
+		http://download.eclipse.org/technology/m2e/releases/	
+	6.替换C:\Users\mmsuna\.m2下的setting.xml文件		
+		内容见Sheet3	
+	7.删除缓存文件夹		
+		C:\Users\mmsuna\.m2\repository	
+	8.创建maven工程		
+		勾选create a simple project	
+		packaging选war	
+	9.配置项目java compiler版本为最高（默认1.5，当前配置1.8）		
+	10.右键选择Project Facets确认Dynamic Web Module为勾选状态，版本为可选的最高版本		
+	11.在10的基础上，选择下方further configuration，将content diretory 换成 src/main/webapp，点击OK		
+	12.进入Deployment Assembly，确保src/main/webapp指向/		
+	13.安装tomcat 8		
+	14.配置tomcat到eclipse server中		
+	15.配置server locations的第二项，且选择路径为tomcat下的webapp		
+	16.在Eclipse中创建server，基于tomcat8		
+	16.Targeted Runtimes选择创建的server		
+			
+	17.官网下载最新版mysql installer 3.3.9并安装		
+	18.Servers tomcat_user.xml中添加mysql帐号信息	
+	19.Mysql官网下载最新mysql connecter for java(j)，并将其中的jar文件放在	src/main/webapp/web-inf/lib中。
+	20.创建jsp和java文件。
+	21.Servers context文件添加mysql信息
+	
