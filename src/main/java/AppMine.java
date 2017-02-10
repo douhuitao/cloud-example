@@ -92,24 +92,24 @@ public class AppMine extends HttpServlet {
         	e.printStackTrace();
         	};
         try {
-        	Connection con= DriverManager.getConnection(url,userid,passwd);
-        	if(!con.isClosed())
-        		pw.println(" connect success !");
-        		Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);  
-        		String sql = "select * from test";  
-        		ResultSet rs = stmt.executeQuery(sql);  
-        		System.out.println(rs.getRow());  //rs.getRow()获得结果集的当前行号（1、2、3等），初始为0            
-        		while(rs.next()){                  
-        			String aName = rs.getString(1); //取得所在行第三列的String值  
-        			pw.println("name="+aName);  
-        		}
+        	//Connection con= DriverManager.getConnection(url,userid,passwd);
+        	//if(!con.isClosed())
+        		//pw.println(" connect success !");
+        		//Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);  
+        		//String sql = "select * from test";  
+        		//ResultSet rs = stmt.executeQuery(sql);  
+        		//System.out.println(rs.getRow());  //rs.getRow()获得结果集的当前行号（1、2、3等），初始为0            
+        		//while(rs.next()){                  
+        			//String aName = rs.getString(1); //取得所在行第三列的String值  
+        			//pw.println("name="+aName);  
+        		//}
         		/* sql = "update testnum set name = 'aaa' where test=2";  
         		 //sql = "select * from mysql.user";  
         		 int result = stmt.executeUpdate(sql);  
         		 if(result != -1){  
         			 System.out.println("connect ok");  
         		 }*/
-        		 con.close();
+        		 //con.close();
         	}
         catch(SQLException SQLe){
         	pw.println(" can not link it!");
